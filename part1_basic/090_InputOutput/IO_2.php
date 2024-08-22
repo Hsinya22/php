@@ -1,7 +1,7 @@
 <?php
 
 $fileDir = dirname ( __FILE__ );
-$fileResource = opendir ( $fileDir );
+$fileResource = opendir ( $fileDir ); //
 
 ?>
 <!DOCTYPE html>

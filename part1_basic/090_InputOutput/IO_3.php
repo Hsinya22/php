@@ -1,8 +1,9 @@
 <?php
 if (isset ( $_POST ["btnOK"] )) {
-	processFile ( $_FILES ["file1"] );
+	// var_dump($_FILES); //查看點擊後運算的陣列 
+	processFile ( $_FILES ["file1"] ); //把file1構成的陣列傳給 processFile
 }
-function processFile($objFile) {
+function processFile($objFile) { 
 	if ($objFile ["error"] != 0) {
 		echo "Upload Fail! ";
 		echo "<a href='javascript:window.history.back();'>Back</a>";
@@ -10,8 +11,10 @@ function processFile($objFile) {
 	}
 	
 	$test = move_uploaded_file ( $objFile ["tmp_name"], "./" . $objFile ["name"] );
+	echo $test; // 1 搬移了一個檔案這件事為真
+	echo "<hr/>";
 	if (! $test) {
-		die ( "move_uploaded_file() faile" );
+		die ( "move_uploaded_file() faile" ); // 出現錯誤 程式結束
 	}
 	
 	echo "File uploaded<br />";
@@ -20,7 +23,7 @@ function processFile($objFile) {
 	echo "File size: " . $objFile ["size"] . "<br />";
 	
 	echo "--  Done --";
-	exit ();
+	exit (); // =>正常方式 程式結束
 }
 
 ?>
