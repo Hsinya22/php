@@ -1,5 +1,5 @@
 <?php
-
+// 當資料出現問題，被藏起來 該怎麼解決? =>public  加上function
 $obj = new CAnimal();
 $obj->makeNoise();
 echo "<hr>";

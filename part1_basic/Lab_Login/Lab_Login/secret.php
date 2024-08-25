@@ -1,3 +1,22 @@
+<?php
+if(!isset($_COOKIE["userName"])){ //當今天不是會員，點擊會員專用頁，會一直停留在首頁
+  header("Location: index.php");
+  exit();
+}
+
+// 此段是測試
+// $userName = $_COOKIE["userName"];
+// echo $userName // =>確認有無順利讀取到
+
+// 此段是測試
+// if(isset($_COOKIE["userName"])){ 
+//   echo "yes";
+// }else{
+//   echo "no";
+// }
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>

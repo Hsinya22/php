@@ -1,4 +1,5 @@
 <?php
+// 物件繼承
 
 $obj = new CDog(3, 10);
 $obj->makeNoise();
@@ -41,7 +42,7 @@ class CDog extends CAnimal {
 	private $_price = 0;
 	
 	function __construct($weightValue = 0, $priceValue = 0) {
-		parent::__construct($weightValue);
+		parent::__construct($weightValue); //呼叫父階的建構式
 		$this->setPrice($priceValue);
 	}
 	
@@ -64,5 +65,7 @@ class CDog extends CAnimal {
 	}
 
 }
+
+
 
 ?>

@@ -1,4 +1,6 @@
 <?php
+//封裝資料到函式
+
 
 $obj = new CAnimal();
 $obj->makeNoise();

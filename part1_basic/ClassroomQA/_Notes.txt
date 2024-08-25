@@ -3,15 +3,17 @@
 
 1.  Rotation.html 是 Hunter Loftis 的作品。
     如果是你，會如何寫作/規畫這支程式?
-
+=>重複使用，不重寫
 
 2.  The Diamond Solution
     請看Diamond.png，該如何定義 Copier 呢?
-    
+=> 物件導向  菱形問題 =>組合代替繼承
     
 3.  有篇文章的標題是「如何以 JavaScript 存取 JSON 資料」，
     請問這篇文章，應該置入下列哪一套資料夾架構?
     或者有其他的作法呢?
+
+    分類不是發生在蒐集的時候 ，是發生在搜尋的時候
 
     doc
      └ JavaScript
@@ -20,7 +22,14 @@
     doc
      └ JSON
          └ JavaScript
-        
+    doc
+     └ JSON
+     └ JavaScript
+
+    doc 
+       如何以 JavaScript 存取 JSON 資料 #JSON #JavaScript  
+       A
+       B
 
 4.   請看 shapes.png，你認為應該怎麼分類比較好?
 
@@ -30,6 +39,18 @@
 
     A ---> B
     A <--- B
+
+    A 提供功能給 B 
+    A ---> B  =>A不會主動提供功能給B，要B先有動作，A才會給出功能
+
+    B 使用 A 的功能
+    A <--- B   ==>這個是對的
+  server  client
+      <-----
+    to      from
+    後       先
+   被動     主動
+  server   client
 
         
 6.  你怎麼知道客戶說的需求是真的需求呢?

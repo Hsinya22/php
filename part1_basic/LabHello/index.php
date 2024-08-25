@@ -33,7 +33,7 @@ else{
         Your name:<input type="text" name="txtUserName" id="txt1" value="<?=$userName?>"><br>
         Email: <input type="text" name="txtEmail" value="<?= $email ?>"><br>
         <input type="submit" name="btnOK" value="OK">
-        <?= $prompt ?>
+        <?= echo $prompt="" ?>
     </form>
 </body>
 </html>

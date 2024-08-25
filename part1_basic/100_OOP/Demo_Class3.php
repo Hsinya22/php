@@ -1,4 +1,5 @@
 <?php
+//建構程式
 
 $obj = new CAnimal(3);
 echo "weight: ", $obj->getWeight(), "<br>";
@@ -13,11 +14,11 @@ class CAnimal
 	// public $weight;
 	private $_weight = 0;
 
-	function __construct($weightValue = 0) {
+	function __construct($weightValue = 0) { //當出現 __construct，在建立當下會被呼叫一次
 		echo "Object Created.<br>";
-		$this->setWeight($weightValue);
+		$this->setWeight($weightValue); // 這樣的寫法功能比較完整
 		// 還是寫成這樣: (哪一個比較好? @@" )
-		// $this->_weight = $weightValue;
+		// $this->_weight = $weightValue;//這寫法比較快速
 	}
 	
 	function __destruct() {
