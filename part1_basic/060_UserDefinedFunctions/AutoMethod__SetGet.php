@@ -15,7 +15,7 @@ class CTest {
 	{
 		echo "__set<br>";
 		echo $varName, ": ", $varValue, "<br>";
-		$this->_dataBag[$varName] = $varValue;
+		$this->_dataBag[$varName] = $varValue; //用陣列記住額外加的東西
 	}
 
 	public function __get($varName)

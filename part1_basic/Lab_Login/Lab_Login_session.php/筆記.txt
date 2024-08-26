@@ -12,3 +12,8 @@ hello後面改為使用者名稱
 step:3
 設定 非會員點擊會員專用頁，會一直停留在首頁
 設定 登出頁面後，清除使用者資料
+if(isset($_GET["logout"])){
+    $_SESSION["userName"] = "Guest"; // 
+    setcookie("userName" , $_SESSION["userName"]);
+    header("Location: index.php");
+}// setcookie("userName" , "Guest", time()- 60*60*24);//如果依照這個的寫法，他會無法跳轉

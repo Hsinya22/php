@@ -4,7 +4,7 @@ function DrawLine() {
 	echo "<hr>";
 }
 
-register_tick_function("DrawLine");
+register_tick_function("DrawLine"); //字串傳function
 
 declare (ticks = 3) {
 	echo "1<br>";
